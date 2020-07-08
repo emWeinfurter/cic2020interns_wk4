@@ -39,7 +39,7 @@ namespace Ibm.Br.Cic.Internship.Covid
 
             //Task: Inject Covid19ApiService
             //Add Covid19ApiService as Transient
-
+            services.AddTransient<ICovid19Api, Covid19ApiService>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

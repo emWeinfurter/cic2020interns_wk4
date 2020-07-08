@@ -64,5 +64,8 @@ namespace Ibm.Br.Cic.Internship.Covid.Be.Models
 
         [JsonProperty(PropertyName = "date")]
         public string Date { get; set; }
+
+        [JsonProperty(PropertyName = "location")]
+        public LocationDataModel? Location { get; set; }
     }
 }
