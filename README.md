@@ -123,3 +123,6 @@ C# - https://docs.microsoft.com/en-us/dotnet/csharp/
 JavaScript/ES6 - https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 amCharts 4: Maps - https://www.amcharts.com/javascript-maps/
+## Contributers
+Elise
+Reginald
