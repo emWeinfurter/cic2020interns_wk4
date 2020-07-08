@@ -35,7 +35,7 @@ namespace Ibm.Br.Cic.Internship.Covid.Be.Services
 
             apifyDataModels.ForEach(async (apifyDataModel) =>
             {
-                var location = _locator.GetLocation(apifyDataModel.Country);
+                var location = _locator.GetLocationName(apifyDataModel.Country);
                 apifyDataModel.Location = location == null ? new LocationDataModel() { Latitude = 0, Longitude = 0 } : location;
             });
 

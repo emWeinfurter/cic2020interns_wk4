@@ -9,5 +9,6 @@ namespace Ibm.Br.Cic.Internship.Covid.Be.Services
     public interface ILocator
     {
         LocationDataModel GetLocation(string country);
+        LocationDataModel GetLocationName(string country);
     }
 }

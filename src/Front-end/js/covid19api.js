@@ -64,7 +64,7 @@ am4core.ready(function () {
 
     let colorSet = new am4core.ColorSet();
 
-    fetch("https://localhost:44313/api/v1/c19api")
+    fetch("https://localhost:44313/api/v2/c19api")
         .then(response => response.json())
         .then(countries => {
 
@@ -80,7 +80,7 @@ am4core.ready(function () {
             tableData += "</tr>";
             tableData += "</thead>";
 
-            countries.sort((a, b) => parseFloat(b.infected) - parseFloat(a.infected));
+            countries.sort((a, b) => parseFloat(b.totalConfirmed) - parseFloat(a.totalConfirmed));
 
             countries.forEach(function (item, index) {
 
@@ -100,7 +100,7 @@ am4core.ready(function () {
                 let i = index / countries.length;
 
                 let datum = {
-                    title: item.country,
+                    title: item.countryName,
                     latitude: item.location.latitude,
                     longitude: item.location.longitude,
                     color: am4core.color(color)
@@ -108,8 +108,8 @@ am4core.ready(function () {
 
                 tableData += "<tbody>";
                 tableData += "<tr>";
-                tableData += "<td>" + item.country + "</td>";
-                tableData += "<td>" + item.infected + "</td>";
+                tableData += "<td>" + item.countryName + "</td>";
+                tableData += "<td>" + item.totalConfirmed + "</td>";
                 tableData += "<tr>";
                 tableData += "</tbody>";
 
