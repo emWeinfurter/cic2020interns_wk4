@@ -6,6 +6,7 @@ using Ibm.Br.Cic.Internship.Covid.Be.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Redis;
 
 namespace Ibm.Br.Cic.Internship.Covid.Be.Controllers
 {    
@@ -22,6 +23,7 @@ namespace Ibm.Br.Cic.Internship.Covid.Be.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 30, Location = ResponseCacheLocation.Any)]
         public async Task<IActionResult> Get()
         {
             var result = await this._covid.GetData();

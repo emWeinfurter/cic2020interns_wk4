@@ -33,7 +33,7 @@ namespace Ibm.Br.Cic.Internship.Covid
             services.AddMvc();
 
             services.AddHttpClient();
-
+            services.AddResponseCaching();
             services.AddTransient<IApify, ApifyService>();
             services.AddSingleton<ILocator, LocatorService>();
 
@@ -63,6 +63,8 @@ namespace Ibm.Br.Cic.Internship.Covid
             app.UseCors("CorsPolicy");
 
             app.UseRouting();
+            
+            app.UseResponseCaching();
 
             app.UseAuthorization();
 
