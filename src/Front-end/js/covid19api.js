@@ -80,7 +80,7 @@ am4core.ready(function () {
             tableData += "</tr>";
             tableData += "</thead>";
 
-            countries.sort((a, b) => parseFloat(b.totalConfirmed) - parseFloat(a.totalConfirmed));
+            //countries.sort((a, b) => parseFloat(b.totalConfirmed) - parseFloat(a.totalConfirmed));
 
             countries.forEach(function (item, index) {
 

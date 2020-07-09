@@ -43,6 +43,9 @@ namespace Ibm.Br.Cic.Internship.Covid.Be.Services
                 country.Location = location == null ? new LocationDataModel() { Latitude = 0, Longitude = 0 } : location;
             });
 
+            //sorts countries in back end
+            countries.Sort((pair1, pair2) => pair2.TotalConfirmed.CompareTo(pair1.TotalConfirmed));
+
             return countries;
         }
     }
